@@ -33,13 +33,13 @@ const ItemDetail = ({ item, loading }) => {
     }
   }, []);
   return (
-    <div style={{ marginTop: '100px', marginLeft: '25px'}}>
+    <div style={{ display: 'flex', marginTop: '100px', marginLeft: '25px'}}>
       
       <Card ref={cardRef} style={{ maxWidth: '300px' }}>
         {item && item.image && (
           <Card.Img
             style={{
-              height: cardHeight,
+              height: '100%',
               maxHeight: '100%',
               objectFit: 'fill',
             }}
@@ -48,22 +48,19 @@ const ItemDetail = ({ item, loading }) => {
             alt={item.name}
           />
         )}
-        <Card.Body>
-          <Card.Title>{item.name}</Card.Title>
+          
+      </Card>
+      <div style={{ marginLeft: "20px" }}> 
+          <Card.Title style={{  }}>{item.name}</Card.Title>
           <Card.Text>Precio: ${item.price}</Card.Text>
           <Card.Text>{item.description}</Card.Text>
-          <Card.Text>Categoria: {item.categoria}</Card.Text>
-        </Card.Body>
-
-        <Card.Footer>
+          <Card.Text>Categoria: {item.categoria}</Card.Text></div>
           <ItemCount cantidad={cantidad}
+          
             handleSumar={handleSumar}
             handleRestar={handleRestar}
             handleAgregar={handleAgregar}
             agregarAlCarrito={() => { agregarAlCarrito(item, cantidad) }} />
-        </Card.Footer>
-      </Card>
-
 
     </div>
   )

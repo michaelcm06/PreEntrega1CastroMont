@@ -4,24 +4,26 @@ import Button from 'react-bootstrap/Button';
 import { CartContext } from '../context/CartContext';
 import { useNavigate } from 'react-router-dom';
 import myImage from '../asst/carrito-de-compras.png';
-import Cart from './Cart';
 
 const CartWidget = () => {
-  const { NumCarrito } = useContext(CartContext);
+  const { nroCarrito } = useContext(CartContext);
   
   const navigate = useNavigate()
   
   const handleCart = () => {
-    navigate(<Cart/>)
+    navigate('/cart')
   }
   
   return (
     <Button onClick={handleCart}  variant="light">
       <img  width="30" src={myImage} alt="Mi imagen" />
-      <Badge bg="secondary"> {NumCarrito()} </Badge> 
+      <Badge bg="secondary"> {nroCarrito()} </Badge> 
     </Button>
    
   );
 }
 
 export default CartWidget;
+
+
+

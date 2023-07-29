@@ -1,0 +1,27 @@
+.enviar{
+    float: left;
+    width: 200px;
+    height: 53px;
+    text-align: center;
+    letter-spacing: 1px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: 300ms;
+    margin-top: 15px;
+    margin-left: 80px;
+    font-size: larger;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.enviar:hover{
+    border: 6px;
+    color: black;
+    background-color: #ccc;
+}
+
+.inputs{
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    height: 40px;
+    padding: 15px;
+}

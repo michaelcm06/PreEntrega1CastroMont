@@ -18,9 +18,8 @@ const Item = ({ producto }) => {
       <Card ref={cardRef} style={{ maxWidth: '345px' }} className='d-flex justify-content-center'>
         <Card.Img
           style={{
-            height: cardHeight,
-            maxHeight: '100%',
-            objectFit: 'none',
+            height: '80%',
+            maxHeight: '100%'
           }}
           variant="top"
           src={producto.image}
